@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import EventList from './EventList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Welcome to Eventique</h1>
+        <h3>Event Planning Made Easy</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </nav>
+        <div className="calendar-link-container">
+          <a href="#" className="calendar-link">My Calendar</a>
+        </div>
       </header>
+      <main>
+        <EventList />
+      </main>
     </div>
   );
 }
